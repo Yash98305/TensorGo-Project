@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext, createContext, useRef } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext(null);
 const api = "http://localhost:8000/api/v1"

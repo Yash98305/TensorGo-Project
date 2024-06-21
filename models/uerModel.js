@@ -14,49 +14,27 @@ const userSchema = new mongoose.Schema({
   phone: {
     type: Number,
   },
-  address: {
-    type: String,
-  },
+
   password: {
     type: String,
   },
-  about: {
+  role: {
     type: String,
+    enum: ["superadmin", "admin", "user"],
+    default: "user",
   },
-  avatar: {
-    type: String,
-
+  plan: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Plan",
   },
-  photo: {
-    data: Buffer,
-    contentType: String,
+  subscription: {
+    sessionId: String,
+    planId: String,
+    planType: String,
+    planStartDate: String,
+    planEndDate: String,
+    planDuration: Number
   },
-status : {
-  type: String,
-  enum: ["active", "inactive"],
-  default: "active"
-},
-monthly_spending :{
-  type: String,
-  default:0
-},
-annual_spending :{
-  type: String,
-  default:0
-},
-monthly_saving :{
-  type: String,
-  default:0
-},
-monthly_earning :{
-  type: String,
-  default:0
-},
-currency:{
-  type: String,
-  enum: ["INR", "USD", "EUR", "GBP"],
-  default: "INR"
-},
   otp: {
     type: String,
   },
@@ -82,14 +60,14 @@ userSchema.methods.comparePassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-userSchema.methods.getResetPasswordToken = function () {
-  const resetToken = crypto.randomBytes(20).toString("hex");
-  this.resetPasswordToken = crypto
-    .createHash("sha256")
-    .update(resetToken)
-    .digest("hex");
-  this.resetPasswordExpire = Date.now() + 15 * 60 * 1000;
-  return resetToken;
-};
+// userSchema.methods.getResetPasswordToken = function () {
+//   const resetToken = crypto.randomBytes(20).toString("hex");
+//   this.resetPasswordToken = crypto
+//     .createHash("sha256")
+//     .update(resetToken)
+//     .digest("hex");
+//   this.resetPasswordExpire = Date.now() + 15 * 60 * 1000;
+//   return resetToken;
+// };
 
 module.exports = mongoose.model("User", userSchema);
