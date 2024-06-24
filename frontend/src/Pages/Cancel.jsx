@@ -1,9 +1,18 @@
-import React from 'react'
-
+import React, { useEffect, useState } from "react";
+import Body from "../Layout/Body";
+import Animate from "../Animate.jsx";
+import CancelPage from "../components/main pages/CancelPage.jsx";
 const Cancel = () => {
-  return (
-    <div>Cancel</div>
-  )
-}
+ 
 
-export default Cancel
+  return (
+    <>
+    <Animate app={<Body obj={<CancelPage/>}/>}/>
+
+      
+    </>
+    
+  );
+};
+
+export default Cancel;
