@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useAuth } from "../../context/auth";
+import  useAuth  from "../../context/auth.jsx";
 import axios from "axios";
 import { useState } from "react";
 import { Button, Card, CardActions, CardContent, Grid, Typography } from "@mui/material";

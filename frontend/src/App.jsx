@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Login from "./pages/Login.jsx";
 import Register from "./pages/Register";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Services from "./pages/Services.jsx";

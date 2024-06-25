@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import img from "../Layout/Mobile login-pana.png"
-import { useAuth } from '../context/auth';
+import useAuth from '../context/auth.jsx';
 import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Visibility from '@mui/icons-material/Visibility';

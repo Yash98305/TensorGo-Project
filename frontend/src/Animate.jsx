@@ -1,7 +1,7 @@
 
   import React from 'react'
   import {motion} from "framer-motion" 
-import { useAuth } from './context/auth'
+import useAuth  from './context/auth.jsx'
   const Animate = ({app}) => {
     const {o} = useAuth()
     return (

@@ -9,7 +9,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-import { useAuth } from "../context/auth";
+import  useAuth  from "../context/auth.jsx";
 
 const ExpireUser = () => {
   const [users, setUsers] = useState([]);

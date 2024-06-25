@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react'
 import "../../css/succecc.css"
-import { NavLink, useNavigate } from 'react-router-dom'
-import { useState } from 'react';
-import {useAuth} from "../../context/auth.js"
-import axios from 'axios'
 import { Button } from '@mui/material';
 const CancelPage = () => {
  

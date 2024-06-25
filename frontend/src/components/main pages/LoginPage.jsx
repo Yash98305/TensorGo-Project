@@ -7,7 +7,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import axios from "axios";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import { useAuth } from "../../context/auth.js";
+import  useAuth  from "../../context/auth.jsx";
 import img from "../../Layout/Secure login-amico.png";
 import { IconButton, OutlinedInput, TextField } from "@mui/material";
 

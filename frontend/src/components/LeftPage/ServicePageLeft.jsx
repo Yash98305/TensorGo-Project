@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import CheckIcon from '@mui/icons-material/Check';
-import { useAuth } from '../../context/auth';
+import  useAuth  from '../../context/auth.jsx';
 
 const ServicePageLeft = ({ open, setOpen }) => {
   const { auth, api } = useAuth();

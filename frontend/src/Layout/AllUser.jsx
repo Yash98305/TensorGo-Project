@@ -10,7 +10,7 @@ import {
   Paper,
   Button,
 } from "@mui/material";
-import { useAuth } from "../context/auth";
+import useAuth  from "../context/auth.jsx";
 const AllUser = ({user,userGet,refresh,setRefresh}) => {
   const{api,auth} = useAuth()
   const deletUser = async(id)=>{

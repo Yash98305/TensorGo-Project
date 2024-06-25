@@ -1,32 +1,19 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
-import { useAuth } from "../context/auth.js";
+import useAuth  from "../context/auth.jsx";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import moment from 'moment';
 
 const PlanListCard = ({ img, plan}) => {
   const navigate = useNavigate();
   const { api, auth} = useAuth();
   const [userId, setUserId] = useState();
-  const [basic, setBasic] = useState(false);
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const serviceId = queryParams.get('serviceId');

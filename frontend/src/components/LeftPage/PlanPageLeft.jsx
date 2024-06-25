@@ -1,6 +1,6 @@
 import { Button, Card, CardActions, CardContent, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Typography } from '@mui/material'
 import React from 'react'
-import { useAuth } from '../../context/auth';
+import  useAuth  from '../../context/auth.jsx';
 import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import axios from "axios"

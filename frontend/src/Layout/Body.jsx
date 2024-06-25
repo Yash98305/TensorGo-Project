@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../css/home.css";
 import { ToastContainer, toast } from "react-toastify";
-import { useAuth } from "../context/auth";
+import useAuth  from "../context/auth";
 import Avatar from "@mui/material/Avatar";
 import NotificationsActiveRoundedIcon from "@mui/icons-material/NotificationsActiveRounded";
 import Search from "./Search";

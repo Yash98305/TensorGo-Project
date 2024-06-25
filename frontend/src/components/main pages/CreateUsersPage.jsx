@@ -6,7 +6,7 @@ import axios from 'axios';
 import CreateUser from '../../Layout/CreateUser';
 import AllUser from '../../Layout/AllUser';
 import { useLocation } from 'react-router-dom';
-import { useAuth } from '../../context/auth';
+import useAuth  from '../../context/auth.jsx';
 
 const CreateUsersPage = () => {
   const { api, auth } = useAuth();

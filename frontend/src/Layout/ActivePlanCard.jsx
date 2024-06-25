@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { useEffect } from "react";
-import { useAuth } from "../context/auth";
+import  useAuth  from "../context/auth.jsx";
 import { useNavigate} from "react-router-dom"
 
 

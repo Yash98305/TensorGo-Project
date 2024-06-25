@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import img1 from "../../Layout/basic.png";
 import img2 from "../../Layout/business.png";
 import img3 from "../../Layout/pro.png";
-import { useAuth } from "../../context/auth";
+import useAuth from "../../context/auth.jsx";
 import axios from "axios";
 import ActivePlanCard from "../../Layout/ActivePlanCard";
 import { Grid } from "@mui/material";

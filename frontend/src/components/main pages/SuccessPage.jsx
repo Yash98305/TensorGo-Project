@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react'
 import "../../css/succecc.css"
-import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
-import {useAuth} from "../../context/auth.js"
+import useAuth from "../../context/auth.jsx"
 import axios from 'axios'
 import { Button } from '@mui/material';
 const SuccessPage = () => {
-    const navigate = useNavigate();
     const [userId, setUserId] = useState("");
     const [sessionId, setSessionId] = useState("");
   const {auth,api} = useAuth();
